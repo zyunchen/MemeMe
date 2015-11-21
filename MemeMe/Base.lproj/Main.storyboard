@@ -56,7 +56,7 @@
                                 <animations/>
                                 <items>
                                     <navigationItem id="uFe-TP-qgt">
-                                        <barButtonItem key="leftBarButtonItem" title="share" id="b9m-Bg-oYp">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="b9m-Bg-oYp">
                                             <connections>
                                                 <action selector="share:" destination="BYZ-38-t0r" id="Chu-Cq-6Cg"/>
                                             </connections>
