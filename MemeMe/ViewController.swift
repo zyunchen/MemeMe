@@ -24,13 +24,21 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     
+    var meme:Meme?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initTextFiled(topEditText)
         initTextFiled(bottomEditText)
-        
         shareButton.enabled = false
+        
+        if let meme = meme {
+            topEditText.text = meme.topText
+            bottomEditText.text = meme.bottomText
+            imageView.image = meme.memedImage
+            shareButton.enabled = true
+        }
         
     }
     
@@ -91,6 +99,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     @IBAction func share(sender: UIBarButtonItem) {
         
         let meme = Meme(topText: topEditText.text!, bottomText: bottomEditText.text!, image: imageView.image!, memedImage: generateMemedImage())
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        
         let activityViewController = UIActivityViewController(activityItems: [meme.memedImage!], applicationActivities: nil)
         showViewController(activityViewController, sender: self)
     }
@@ -99,6 +111,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         topEditText.text = "TOP"
         bottomEditText.text = "BOTTOM"
         shareButton.enabled = false
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func keyboardWillShow(notification:NSNotification){
