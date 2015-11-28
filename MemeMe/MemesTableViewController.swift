@@ -47,6 +47,7 @@ class MemesTableViewController: UITableViewController {
         cell.textLabel?.text = meme.topText
         cell.imageView?.image = meme.memedImage
         
+        
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -56,7 +57,6 @@ class MemesTableViewController: UITableViewController {
 //TODO:        detailVC.hidesBottomBarWhenPushed = true  , why this doesn't work
         tabBarController?.tabBar.hidden = true
         performSegueWithIdentifier("detailView", sender: indexPath)
-//        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
