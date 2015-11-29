@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Sent Memes-->
@@ -187,29 +185,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <animations/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test always" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB0-uI-Soz">
-                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Ghc-0A-0q8"/>
-                                                <constraint firstAttribute="width" constant="85" id="sKP-z6-mnB"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Ghc-0A-0q8"/>
-                                                    <exclude reference="sKP-z6-mnB"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="Ghc-0A-0q8"/>
-                                                    <include reference="sKP-z6-mnB"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -222,9 +197,7 @@
                                     <constraint firstItem="bo1-h2-vP2" firstAttribute="leading" secondItem="Oa4-HN-vah" secondAttribute="leading" id="SNf-6E-RWW"/>
                                     <constraint firstAttribute="trailing" secondItem="bo1-h2-vP2" secondAttribute="trailing" id="XDs-gb-ogk"/>
                                     <constraint firstAttribute="bottom" secondItem="bo1-h2-vP2" secondAttribute="bottom" id="Xxa-EZ-8fM"/>
-                                    <constraint firstItem="jB0-uI-Soz" firstAttribute="centerX" secondItem="Oa4-HN-vah" secondAttribute="centerX" id="dFL-NT-WfE"/>
                                     <constraint firstItem="bo1-h2-vP2" firstAttribute="width" secondItem="Oa4-HN-vah" secondAttribute="width" id="da0-TX-HGB"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="jB0-uI-Soz" secondAttribute="bottom" id="dpK-IR-1gx"/>
                                     <constraint firstItem="bo1-h2-vP2" firstAttribute="top" secondItem="Oa4-HN-vah" secondAttribute="top" id="jyY-gY-JFB"/>
                                     <constraint firstAttribute="bottom" secondItem="bo1-h2-vP2" secondAttribute="bottom" id="l5n-Oc-lra"/>
                                     <constraint firstItem="bo1-h2-vP2" firstAttribute="top" secondItem="Oa4-HN-vah" secondAttribute="top" id="nET-ZB-T1t"/>
@@ -232,11 +205,8 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="bo1-h2-vP2"/>
-                                        <exclude reference="jB0-uI-Soz"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="dFL-NT-WfE"/>
-                                        <exclude reference="dpK-IR-1gx"/>
                                         <exclude reference="1YX-Jr-Ehc"/>
                                         <exclude reference="IUi-9V-XaJ"/>
                                         <exclude reference="K2N-1M-Nav"/>
@@ -252,11 +222,8 @@
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="bo1-h2-vP2"/>
-                                        <include reference="jB0-uI-Soz"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="dFL-NT-WfE"/>
-                                        <include reference="dpK-IR-1gx"/>
                                         <include reference="1YX-Jr-Ehc"/>
                                         <include reference="IUi-9V-XaJ"/>
                                         <include reference="K2N-1M-Nav"/>
@@ -494,6 +461,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3vR-p3-cDN"/>
-        <segue reference="S8y-3E-Byk"/>
+        <segue reference="Kde-7d-7r6"/>
     </inferredMetricsTieBreakers>
 </document>
