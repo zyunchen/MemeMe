@@ -55,6 +55,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         subscribeToKeyboardNoticifations()
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
